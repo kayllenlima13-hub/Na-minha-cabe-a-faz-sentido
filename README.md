@@ -1,2 +1,3 @@
 # Na-minha-cabe-a-faz-sentido
 Publique coisas que na sua cabeça faça sentido e veja se as pessoas concordam com você...
+<meta name="google-site-verification" content="uOsqmA4g_XWtpGr_pMg2DbCDHEiXCbdz6grHlSKErek" />
