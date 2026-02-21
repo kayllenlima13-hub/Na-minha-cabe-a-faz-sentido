@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Na minha cabeça faz sentido</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a0dad, #b19cd9);
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 20px;
+    }
+
+    textarea {
+      width: 90%;
+      max-width: 500px;
+      height: 100px;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      resize: none;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: white;
+      color: #6a0dad;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .post {
+      background: white;
+      color: #333;
+      margin: 20px auto;
+      padding: 15px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Na minha cabeça faz sentido</h1>
+  <p>Escreva algo que só faz sentido pra você 👀</p>
+
+  <textarea id="textInput" placeholder="Digite aqui..."></textarea>
+  <br>
+  <button onclick="postar()">Publicar</button>
+
+  <div id="posts"></div>
+
+  <script>
+    function postar() {
+      let texto = document.getElementById("textInput").value;
+
+      if (texto.trim() === "") {
+        alert("Escreve alguma coisa primeiro 😅");
+        return;
+      }
+
+      let novaPostagem = document.createElement("div");
+      novaPostagem.className = "post";
+      novaPostagem.innerText = texto;
+
+      document.getElementById("posts").prepend(novaPostagem);
+
+      document.getElementById("textInput").value = "";
+    }
+  </script>
+
+</body>
+</html>
